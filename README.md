@@ -7,8 +7,9 @@ The goal is to study and experiment through the project, not ending with a wonde
 
 ## Trading strategy
 
-It will be a long only strategy, the idea is the next:    we Long the stock if the 5 period EMA is above the 200 period EMA 
-                                                          else we do nothing.
+It will be a long only strategy, the idea is the next:    
+  - we Long the stock if the 5 period EMA is above the 200 period EMA 
+  - else we do nothing.
                                                           
 ## Asset allocation
 Since this will be applied to every single stock of the S&P500 we will then construct a equally weighted portfolio with all the strategy returns of each individual stock.
@@ -24,15 +25,20 @@ Finally we used an Hidden Markov Model (HMM) to filter market states.
 
 
 # Methodology
-## *How did we downloaded the data for the S&P500 stocks constituents ?*
+## *How did we downloaded the data of the S&P500 stocks constituents ?*
 
-We used the information given by wikipedia at the following link : https://en.wikipedia.org/wiki/List_of_S%26P_500_companies.
+We used the information given by wikipedia at the following link : https://en.wikipedia.org/wiki/List_of_S%26P_500_companies. once done we downloaded daily historical stock data for each tickers.
 This implies one problem, it gives the list of todays stocks in the index, but not the list of all the stocks that where in the index during the year we are backtesting the strategy.
 What does it implies in our context ?
 
-1. The stock that are TODAY in the 500 biggest capitalisation of USA are the stocks that performed well in the past years, implying that it will artificially increase the preformance of our a Long only trend following strategy. Backtesting the trend following strategy with these data would imply that we knew in the past which stock would be in the S&P500 today; alternatively do we know what stocks will be in the index in some years ? NOOOO !!!
+1. The stock that are TODAY in the 500 biggest capitalisation of USA are the stocks that performed well in the past years, implying that it will artificially increase the preformance of our a Long only trend following strategy because we are buying past years winners. Backtesting the trend following strategy with these data would imply that we knew in the past which stock would be in the S&P500 today; alternatively do we know what stocks will be in the index in some years ? NOOOO WE DON'T !!!
 
-2. Using the stock that are TODAY in the index to backtest our strategy would also imply that we would ignore the loser in the past, it would imply that we knew in the past which stocks would be the losers in the future. Hence our trend following strategy will be artificially better because we wont long loser stocks. 
+2. Using the stock that are TODAY in the index to backtest our strategy would also imply that we would ignore the loser, it would imply that we knew in the past which stocks would be the losers in the future. Hence our trend following strategy will be artificially better because we will not long loser stocks.
+
+This phenomena is called the **Survival Bias**.
+To solve it: 
+  - We could look for a dataset with the list of all the stocks constituents of the S&P500 at each date, then download and process the data to obtain a complete full data set without survivorship bias.
+  - Use some data from data providers such as CRSP or other counterparty
 
 
 
