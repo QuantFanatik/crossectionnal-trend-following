@@ -23,6 +23,7 @@ Finally we used an Hidden Markov Model (HMM) to filter market states.
     
   - By CAPM a well divesifed portfolio express only systematik risk, since we have eliminated the idiosincratic risk by diversification; in other words we need to control market risk in order to control the portfolio risk. The HMM will help us to filter the time where market are too risky and not rewarding for the actual risk.
 
+<img src="Correlation matrices.png" width="100%" />
 
 # Methodology
 ## *How did we downloaded the data of the S&P500 stocks constituents ?*
