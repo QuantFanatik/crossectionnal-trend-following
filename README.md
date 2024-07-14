@@ -35,10 +35,37 @@ What does it implies in our context ?
 
 2. Using the stock that are TODAY in the index to backtest our strategy would also imply that we would ignore the loser, it would imply that we knew in the past which stocks would be the losers in the future. Hence our trend following strategy will be artificially better because we will not long loser stocks.
 
-This phenomena is called the **Survival Bias**.
+This phenomena is called the **Survivorship Bias**.
 To solve it: 
   - We could look for a dataset with the list of all the stocks constituents of the S&P500 at each date, then download and process the data to obtain a complete full data set without survivorship bias.
-  - Use some data from data providers such as CRSP or other counterparty
+  - Use some data from data providers such as CRSP or other counterparty. But it is costly.
+  - Try to find on the net, some free dataset without survivorship bias. But it is less reliable on the correctnes of the constituents.
+
+## *Some notes on HMM*
+
+To fit the HMM we used Daily SPY data from Yahoo finance form 1950 to 2002.
+Then the foercast of the model have been made from 2003 to 2023.
+
+We assigned 3 states:
+1. Sell     => no trading
+2. Neutral  => no trading
+3. Buy      => trading the strategy
+
+## *Some notes on the backtest period*
+
+this strategy has been tested on daily data from 2003 to June 2023
+
+
+# Results
+
+
+
+
+
+
+
+
+
 
 
 
