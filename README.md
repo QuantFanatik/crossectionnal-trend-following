@@ -19,4 +19,20 @@ Finally we used an Hidden Markov Model (HMM) to filter market states.
 *What is the utility of filtering bad market state when we are diversified ?* 
   
   - The covariance matrix is evolving through time and have specific dynamics through market regimes. When markets are in a bearish regime, covariance between asset will increase and the majority of the asset will have higher correlation with one an other. Using the HMM to filter bullish and bearish state will help to minimize the portfolio exposition to bad market states.
-  - By CAPM a well divesifed portfolio express only systematik risk, since we have eliminated the idiosincratic risk by diversification; in other words we need to control market risk in order to control the portfolio risk. The HMM will help us to filter the time where market are too risky and 
+    
+  - By CAPM a well divesifed portfolio express only systematik risk, since we have eliminated the idiosincratic risk by diversification; in other words we need to control market risk in order to control the portfolio risk. The HMM will help us to filter the time where market are too risky and not rewarding for the actual risk.
+
+
+# Methodology
+## *How did we downloaded the data for the S&P500 stocks constituents ?*
+
+We used the information given by wikipedia at the following link : https://en.wikipedia.org/wiki/List_of_S%26P_500_companies.
+This implies one problem, it gives the list of todays stocks in the index, but not the list of all the stocks that where in the index during the year we are backtesting the strategy.
+What does it implies in our context ?
+
+1. The stock that are TODAY in the 500 biggest capitalisation of USA are the stocks that performed well in the past years, implying that it will artificially increase the preformance of our a Long only trend following strategy. Backtesting the trend following strategy with these data would imply that we knew in the past which stock would be in the S&P500 today; alternatively do we know what stocks will be in the index in some years ? NOOOO !!!
+
+2. Using the stock that are TODAY in the index to backtest our strategy would also imply that we would ignore the loser in the past, it would imply that we knew in the past which stocks would be the losers in the future. Hence our trend following strategy will be artificially better because we wont long loser stocks. 
+
+
+
