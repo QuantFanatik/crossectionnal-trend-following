@@ -58,7 +58,10 @@ This strategy has been tested on daily data from 2003 to June 2023
 
 # Results
 
-below you can see some three equity curve, one is the strategy with HMM and equaly wheighted, then you have a simple equaly wheighted portfolio made of the biased stock data, this way we would be able to compare the strategy effectivenes to some comparable benchmark, finally you have the actual SPY cumulative return meaning the SPY isn't survivorshiply biased so we have something that get us back to reality.
+Below you can see some three equity curve, 
+- one is the strategy with HMM and equaly wheighted,
+- then you have a simple equaly wheighted portfolio made of the biased stock data, this way we would be able to compare the strategy effectivenes to some comparable benchmark,
+- finally you have the actual SPY cumulative return meaning the SPY isn't survivorshiply biased so we have something that get us back to reality.
 
 The red background represents the moment where the HMM has forcasted a Neutral or a Sell state, hence we will not apply the strategy.
 
