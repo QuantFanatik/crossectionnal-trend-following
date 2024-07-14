@@ -53,11 +53,24 @@ We assigned 3 states:
 
 ## *Some notes on the backtest period*
 
-this strategy has been tested on daily data from 2003 to June 2023
+This strategy has been tested on daily data from 2003 to June 2023
 
 
 # Results
+
+below you can see some three equity curve, one is a simple equaly wheighted portfolio made of the biased stock data, this way we would be able to compare the strategy effectivenes to some comparable benchmark, then you have the strategy with HMM and equaly wheighted, and then you have the actual SPY cumulative return meaning the SPY isn't survivorshiply biased.
+
 <img src="Results.png" width="100%" />
+
+
+# Future improvement/commits :
+- Getting survivorship bias free data, making a comparaision.
+- Applying some mean variance analysis.
+- Going deeper in the results of the strategy : Sharpe ratio; alpha, beta,
+
+
+
+
 
 
 
