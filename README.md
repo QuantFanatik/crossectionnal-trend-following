@@ -1,6 +1,6 @@
 #### ATTENTION SURVIVORSHIP BIAS
 
-# crossectionnal trend following
+# Crossectionnal trend following
 
 This project is about building and test a simple trend following strategy on all the stocks of the S&P500.
 
