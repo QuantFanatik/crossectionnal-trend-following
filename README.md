@@ -8,8 +8,8 @@ The goal is to study and experiment through the project, not ending with a wonde
 ## Trading strategy
 
 It will be a long only strategy, the idea is the next:    
-  - we Long the stock if the 5 period EMA is above the 200 period EMA 
-  - else we do nothing.
+  - We Long the stock if the 5 period EMA is above the 200 period EMA,
+  - Else we do nothing.
                                                           
 ## Asset allocation
 Since this will be applied to every single stock of the S&P500 we will then construct a equally weighted portfolio with all the strategy returns of each individual stock.
@@ -59,9 +59,9 @@ This strategy has been tested on daily data from 2003 to June 2023
 # Results
 
 Below you can see some three equity curve, 
-- one is the strategy with HMM + equaly wheighted,
-- then you have a simple equaly wheighted portfolio made of the biased stock data, this way we would be able to compare the strategy effectivenes to some comparable benchmark,
-- finally you have the actual SPY cumulative return meaning the SPY isn't survivorshiply biased so we have something that get us back to reality.
+- One is the strategy with HMM + equaly wheighted,
+- Then you have a simple equaly wheighted portfolio made of the biased stock data, this way we would be able to compare the strategy effectivenes to some comparable benchmark,
+- Finally you have the actual SPY cumulative return meaning the SPY isn't survivorshiply biased so we have something that get us back to reality.
 
 The red background represents the moment where the HMM has forcasted a Neutral or a Sell state, hence we will not apply the strategy.
 
