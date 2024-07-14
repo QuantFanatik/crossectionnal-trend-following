@@ -58,11 +58,7 @@ this strategy has been tested on daily data from 2003 to June 2023
 
 # Results
 
-
-
-
-
-
+/crossectionnal-trend-following/Results.png
 
 
 
