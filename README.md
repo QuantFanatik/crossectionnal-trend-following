@@ -1,4 +1,4 @@
-#ATTENTION SURVIVORSHIP BIAS
+## ATTENTION SURVIVORSHIP BIAS
 
 # crossectionnal trend following
 
